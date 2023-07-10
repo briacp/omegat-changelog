@@ -1,0 +1,14 @@
+name: Omegat Release Notes
+author: Briac Pilpré
+description: Generates a release note from closed ticket/PR for OmegaT
+branding:
+  icon: paperclip
+  color: blue
+inputs:
+  milestone:
+    description: Name of the milestone (it can also be the version tag)
+    required: true
+runs:
+  using: node16
+  # compiled with `npx ncc build omegat-changelog.js --minify --out dist`
+  main: dist/index.js
